@@ -25,6 +25,8 @@ def BubbleSort(frame):
         print(y)
         graph.cla()
         graph.bar(x,y)
+        if(frame == n-1):
+             animate.pause()
 
 
 tab = [0,5]
@@ -36,7 +38,7 @@ graph.bar(x,y)
 
 graph.set(xlim=(0, 21), xticks=np.arange(1, 21,1), ylim=(0, 101) ,  yticks=np.arange(10, 110 ,10))
 
-animate = FuncAnimation(plt.gcf(),func = BubbleSort,frames =n  ,interval = 1000)
+animate = FuncAnimation(plt.gcf(),func = BubbleSort,frames =n  ,interval = 100)
 plt.show()
 
 

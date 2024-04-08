@@ -36,6 +36,8 @@ def Bottom_Up_Merge_Sort(frame):
         i+=1
     graph.cla()
     graph.bar(x,y)
+    if(frame == helP -1 ):
+        animate.pause()
 
 x = np.linspace(1,20,20)
 y = random.sample(range(1,100),20)
@@ -44,7 +46,7 @@ graph = plt.subplot()
 graph.bar(x,y)
 helP = int(math.log(len(y),2))+1
 graph.set(xlim=(0, 21), xticks=np.arange(1, 21,1), ylim=(0, 101) ,  yticks=np.arange(10, 110 ,10))
-animate = FuncAnimation(plt.gcf(),func = Bottom_Up_Merge_Sort,frames = helP  ,interval = 1000)
+animate = FuncAnimation(plt.gcf(),func = Bottom_Up_Merge_Sort,frames = helP  ,interval = 10)
 plt.show()
 
 
